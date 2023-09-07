@@ -46,4 +46,26 @@ function playRound(playerSelect, computerSelect){
         }
     }
 }
-console.log(playRound("rock", 3))
+
+function game(){
+    let playerWins = 0;
+    let computerWins = 0;
+    while(true){
+        let playerSelect = prompt("Rock, Paper, Scissors, Shoot!")
+        let result = playRound(playerSelect, getComputerChoice())
+        console.log(result)
+        result = result.split("!")[0];
+        if(result === "You Win"){playerWins += 1;}
+        else if (result === "You Lose"){computerWins += 1;}
+        if(playerWins ===  3){
+            console.log(`Player Wins! ${playerWins} - ${computerWins}`)
+            break;
+        }
+        else if(computerWins ===  3){
+            console.log(`Computer Wins! ${playerWins} - ${computerWins}`)
+            break;
+        }
+    }
+}
+
+game();
