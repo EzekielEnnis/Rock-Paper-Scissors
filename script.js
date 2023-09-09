@@ -50,7 +50,42 @@ function playRound(playerSelect, computerSelect){
     }
 }
  /* Main game loop, keep score to play to best of 5 */
-function game(){
+ function game(roundResult){
+    const score = document.querySelector(".score")
+    
+    let playerWins = +score.textContent.split(" - ")[0];
+    let computerWins = +score.textContent.split(" - ")[1];
+
+    let result = roundResult.split("!")[0];
+    result = result.split("!")[0]; // Find win or lose result
+    if(result === "You Win"){playerWins += 1;}
+    else if (result === "You Lose"){computerWins += 1;}
+        score.textContent = `${playerWins} - ${computerWins}`
+ };
+ const btn = document.querySelectorAll(".hand-btn");
+ 
+ btn.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        const handClicked = e.currentTarget.className.split(" ")[1];
+        const cpu = getComputerChoice();
+        const roundResult = playRound(handClicked, cpu);
+
+        const txtRoundResult = document.querySelector(".round-results");
+        txtRoundResult.textContent = roundResult;
+        game(roundResult);
+    });
+});
+
+
+
+
+
+
+
+
+
+/*
+    function game(){
     let playerWins = 0;
     let computerWins = 0;
     while(true){
@@ -70,3 +105,4 @@ function game(){
         }
     }
 }
+*/
