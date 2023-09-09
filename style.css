@@ -85,7 +85,122 @@
     --clr-rock: #FE2BF1;
     --clr-main-text: #CFB6FE;
 }
-
+body{
+    background-color: var(--clr-background);
+}
 button {
-    background-color: none;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 16px 32px;
+    margin-bottom: 16px;
+
+    & .logo {
+        font-weight: 900;
+        font-size: 32px;
+        color: var(--clr-main-text);
+    }
+
+    & ul {
+        list-style: none;
+        display: flex;
+        gap: 16px;
+        color: var(--clr-main-text);
+    }
+
+    & a {
+        font-size: 20px;
+        color: var(--clr-main-text);
+    }
+}
+
+/* Page */
+.game-text {
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    color: var(--clr-main-text);
+    margin-bottom: 64px;
+}
+
+.game-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 64px;
+    gap: 64px;
+
+    & .player-hand,
+    .computer-hand {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 48px;
+    }
+}
+
+.hand-btn {
+    width: 225px;
+    height: 225px;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 10px solid;
+    padding: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & img {
+        min-height: 0;
+        flex: content;
+        margin: 16px;
+    }
+
+    &.rock {
+        color: var(--clr-rock);
+        border-color: var(--clr-rock);
+    }
+    &.paper {
+        color: var(--clr-paper);
+        border-color: var(--clr-paper);
+    }
+    &.scissors {
+        color: var(--clr-scissors);
+        border-color: var(--clr-scissors);
+    }
+}
+
+.game-info {
+    width: 256px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    & *{
+        margin: 64px 0px;
+    }
+
+    & .score{
+        color: var(--clr-main-text);
+        font-weight: 900;
+        font-size: 64px;
+    }
+
+    & .round-results{
+        color: var(--clr-main-text);
+    }
 }
