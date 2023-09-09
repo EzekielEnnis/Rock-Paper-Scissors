@@ -1,0 +1,91 @@
+/* General Block */
+@font-face {
+    font-family: "monsterrat-alt";
+    src: url("./assets/fonts/montserratalternates-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "monsterrat-alt";
+    src: url("./assets/fonts/montserratalternates-italic-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "monsterrat-alt";
+    src: url("./assets/fonts/montserratalternates-medium-webfont.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: "monsterrat-alt";
+    src: url("./assets/fonts/montserratalternates-mediumitalic-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "monsterrat-alt";
+    src: url("./assets/fonts/montserratalternates-semibold-webfont.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "monsterrat-alt";
+    src: url("./assets/fonts/montserratalternates-semibolditalic-webfont.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: "monsterrat-alt";
+    src: url("./assets/fonts/montserratalternates-bold-webfont.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "monsterrat-alt";
+    src: url("./assets/fonts/montserratalternates-bolditalic-webfont.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: "monsterrat-alt";
+    src: url("./assets/fonts/montserratalternates-extrabold-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "monsterrat-alt";
+    src: url("./assets/fonts/montserratalternates-extrabolditalic-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "monsterrat-alt";
+    src: url("./assets/fonts/montserratalternates-black-webfont.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "monsterrat-alt";
+    src: url("./assets/fonts/montserratalternates-blackitalic-webfont.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+}
+* {
+    box-sizing: border-box;
+    font-family: "monsterrat-alt";
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --clr-background: #26006E;
+    --clr-scissors: #0C7CEB;
+    --clr-paper: #00DFBA;
+    --clr-rock: #FE2BF1;
+    --clr-main-text: #CFB6FE;
+}
+
+button {
+    background-color: none;
+}
