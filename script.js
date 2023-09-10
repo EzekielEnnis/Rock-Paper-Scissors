@@ -49,8 +49,10 @@ function playRound(playerSelect, computerSelect){
         }
     }
 }
+
  /* Main game loop, keep score to play to best of 5 */
  function game(roundResult){
+    const winTotal = 3;
     const score = document.querySelector(".score") // Get scoreboard
     
     // Splits score element instead of keeping global variable
@@ -62,6 +64,18 @@ function playRound(playerSelect, computerSelect){
     if(result === "You Win") playerWins += 1; // +1 player score
     else if (result === "You Lose") computerWins += 1; // +1 cpu score
         score.textContent = `${playerWins} - ${computerWins}`
+
+    if (playerWins === winTotal || computerWins === winTotal) setTimeout(() =>{
+        // Tells player overall result of the game and reloads page
+        if (playerWins > computerWins) {
+            if(alert("You Win!"));
+            else window.location.reload();
+        }
+        else {
+            if(alert("You Lose!"));
+            else window.location.reload();
+        }
+        }, 250);
  };
 
 

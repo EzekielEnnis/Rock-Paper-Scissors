@@ -81,8 +81,11 @@
 :root {
     --clr-background: #26006E;
     --clr-scissors: #0C7CEB;
+    --clr-scissors-alt: #F38314;
     --clr-paper: #00DFBA;
+    --clr-paper-alt: #FF2045;
     --clr-rock: #FE2BF1;
+    --clr-rock-alt: #01D40E;
     --clr-main-text: #CFB6FE;
 }
 body{
@@ -180,6 +183,18 @@ a {
         color: var(--clr-scissors);
         border-color: var(--clr-scissors);
     }
+    &.rock.cpu {
+        color: var(--clr-rock-alt);
+        border-color: var(--clr-rock-alt);
+    }
+    &.paper.cpu {
+        color: var(--clr-paper-alt);
+        border-color: var(--clr-paper-alt);
+    }
+    &.scissors.cpu {
+        color: var(--clr-scissors-alt);
+        border-color: var(--clr-scissors-alt);
+    }
 }
 
 .game-info {
@@ -203,4 +218,14 @@ a {
     & .round-results{
         color: var(--clr-main-text);
     }
+}
+
+/* Animations */
+
+button:hover {
+    scale: 0.95;
+}
+button:active {
+    scale: 1.1;
+    box-shadow: 0px 0px 20px currentColor;
 }
